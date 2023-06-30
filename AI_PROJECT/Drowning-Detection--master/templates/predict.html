@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+    <title>Virtualeye - Life Guard For Swimming Pools</title>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/owl.carousel.css">
+    <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="static/css/font-awesome.min.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="static/css/tooplate-style.css">
+    
+    <style>
+        body, html {
+            height: 100%;
+        }
+        #home {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            position: relative;
+        }
+        #home h1 {
+            color: black;
+            font-size: 36px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            margin-top: -56px; /* Adjust the value to move it further upwards */
+            z-index: 2;
+        }
+        #home img {
+            max-width: 100%;
+            border: 8px solid whitesmoke;
+            margin-top: -26px;
+            z-index: 1;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+        .output-text {
+            border-radius: 5px;
+            padding: 10px;
+            
+            position: relative; /* Add this line to make it relative to the parent */
+            z-index: 3; /* Add a higher z-index to ensure it appears above the overlay */
+        }
+    </style>
+</head>
+<body>
+    <section id="home" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="output-text">
+            <h1>{{output}}</h1>
+        </div>
+        <img src="{{ url_for('static', filename='output.jpg') }}" alt="Output Image">
+    </section>
+
+    <footer id="footer" data-stellar-background-ratio="0.5">
+     <div class="container">
+          <div class="row">
+ 
+               <div class="copyright-text col-md-12 col-sm-12">
+                    <div class="col-md-6 col-sm-6">
+                         <p>Copyright &copy;Virtualeye Virtual lifeguard for swimming pool drowning detection</p>
+                    </div>
+ 
+                    <div class="col-md-6 col-sm-6">
+                         <ul class="social-icon">
+                              <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                              <li><a href="#" class="fa fa-twitter"></a></li>
+                              <li><a href="#" class="fa fa-instagram"></a></li>
+                         </ul>
+                    </div>
+               </div>
+ 
+          </div>
+     </div>
+ </footer>
+</body>
+</html>
